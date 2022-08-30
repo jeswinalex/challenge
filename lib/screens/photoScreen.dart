@@ -4,7 +4,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:codingchallenge/models/photoModels.dart';
 import 'package:codingchallenge/services/services.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+
+import 'loginScreen.dart';
 
 class PhotoScreen extends StatefulWidget {
   const PhotoScreen({super.key});
@@ -25,6 +28,20 @@ class _PhotoScreenState extends State<PhotoScreen> {
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+                onPressed: () {
+                  Get.offAll(
+                    LoginPage(),
+                  );
+                },
+                icon: Icon(
+                  Icons.logout,
+                )),
+          )
+        ],
         centerTitle: true,
         backgroundColor: Colors.grey,
         title: Text('Photo Screen'),

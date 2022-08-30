@@ -8,7 +8,7 @@ import 'screens/albumScreen.dart';
 void main() {
   runApp(
     GetMaterialApp(
-      home: AlbumPage(),
+      home: LoginPage(),
     ),
   );
 }

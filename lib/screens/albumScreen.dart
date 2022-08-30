@@ -1,5 +1,6 @@
 import 'package:codingchallenge/models/albumModel.dart';
 import 'package:codingchallenge/models/photoModels.dart';
+import 'package:codingchallenge/screens/loginScreen.dart';
 import 'package:codingchallenge/screens/photoScreen.dart';
 import 'package:image_viewer/image_viewer.dart';
 import 'package:flutter/material.dart';
@@ -33,6 +34,20 @@ class _AlbumPageState extends State<AlbumPage> {
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         backgroundColor: Colors.grey,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+                onPressed: () {
+                  Get.offAll(
+                    LoginPage(),
+                  );
+                },
+                icon: Icon(
+                  Icons.logout,
+                )),
+          )
+        ],
         centerTitle: true,
         title: Text(
           'Album Screen',
